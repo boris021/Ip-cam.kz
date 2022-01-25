@@ -1,0 +1,211 @@
+//====================================================================================================
+.header {
+	position: relative;
+
+	&__body-top {
+		padding-top: 15px;
+		padding-bottom: 23px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
+	}
+
+	&__bottom {
+		background: #16294A;
+		border-radius: 10px;
+		padding: 20px;
+		border: 5px solid #fff;
+
+		@media (max-width: $mobile) {
+			border: 0;
+			border-radius: none;
+		}
+	}
+}
+
+.top-body {
+
+	&__logo {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+
+		max-width: 144px;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+
+		& span {
+			display: block;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+
+	&__phone {
+		font-weight: 600;
+		line-height: 27px;
+		font-size: 22px;
+
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&__button {}
+}
+
+@media (max-width: $tablet) {
+	.header__top-btn {
+		display: none;
+	}
+}
+
+.social-items {
+	@media (max-width: $mobile) {
+		display: none;
+	}
+
+	display: flex;
+
+	&__icons {
+		display: inline-flex;
+		align-items: center;
+		background: #FFFFFF;
+		border-radius: 30px;
+		padding: 8px 15px;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__icon {
+		width: 16px;
+		height: 16px;
+		margin-right: 6px;
+	}
+
+	&__text {
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+
+.menu {
+
+	&__icon {}
+
+	&__body {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link {
+		color: #FFFFFF;
+		font-weight: 500;
+		font-size: 14px;
+		@include adaptiveValue("font-size", 14, 12);
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		transition: opacity 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.top-body__logo-mobile {
+	display: none;
+
+	@media (max-width: $mobile) {
+		display: block;
+		color: #FFFFFF;
+		font-weight: bold;
+		font-size: 24px;
+
+		& span {
+			display: block;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 140%;
+		}
+	}
+}
+
+
+
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #fff;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
