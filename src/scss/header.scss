@@ -22,9 +22,15 @@
 
 		@media (max-width: $mobile) {
 			border: 0;
-			border-radius: none;
+			border-radius: 0;
+			margin: 0 -15px;
+			max-height: 70px;
 		}
 	}
+}
+
+.menu__body {
+	display: block;
 }
 
 .top-body {
@@ -100,18 +106,14 @@
 }
 
 .menu {
-
-	&__icon {}
-
-	&__body {
-		@media (max-width: $mobile) {
-			display: none;
-		}
-	}
-
 	&__list {
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width:$mobile) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	&__link {
@@ -147,15 +149,10 @@
 	}
 }
 
-
-
-
-//====================================================================================================
-
 //Burger
 
 .icon-menu {
-	display: none;
+	// display: none;
 
 	@media (max-width: $mobile) {
 		display: block;
