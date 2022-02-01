@@ -271,10 +271,7 @@
 		padding: 0 7.5px;
 		display: block;
 		margin: auto;
-
-		&:not(:last-child) {
-			margin-bottom: 30px;
-		}
+		margin-bottom: 30px;
 	}
 
 	&__list-text {
@@ -347,6 +344,9 @@
 }
 
 .estimate-img {
+	width: 100%;
+	height: 100%;
+
 	@media (max-width:$pc) {
 		text-align: center;
 		display: block;
