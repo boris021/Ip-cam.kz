@@ -31,6 +31,7 @@
 		@media (max-width: $mobile) {
 			background-color: transparent;
 			position: fixed;
+			width: 100%;
 			border: 0;
 			border-radius: 0;
 			margin: 0 -15px;
@@ -156,7 +157,7 @@
 
 		& li {
 			@media (max-width:$mobile) {
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 
 			}
 		}
@@ -172,7 +173,7 @@
 		transition: opacity 0.3s ease 0s;
 
 		@media (max-width:$mobile) {
-			font-size: 16px;
+			font-size: 17px;
 			color: #494c4f;
 		}
 
@@ -188,6 +189,7 @@
 	@media (max-width: $mobile) {
 		display: flex;
 		flex-direction: column;
+		flex: 1 1 auto;
 		margin-right: 30px;
 		color: #FFFFFF;
 		font-weight: bold;
@@ -371,7 +373,7 @@
 	display: none;
 
 	@media (max-width: $mobile) {
-		display: block;
+		display: inline-flex;
 		position: relative;
 		width: rem(30);
 		height: rem(18);
