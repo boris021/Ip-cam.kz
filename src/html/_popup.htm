@@ -1,11 +1,23 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
+<div id="callback" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
+			<button data-close type="button" class="popup__close">x</button>
+			<div class="popup__img">
+				<img src="@img/cam.png" alt="cam">
+			</div>
 			<div class="popup__text">
+				<div class="popup__text-title">Введите Ваш номер телефона</div>
+				<div class="popup__text-subtitle">и мы Вам перезвоним в течении 15 минут</div>
+				<div class="popup__form">
+					<form action="#" method="post" class="popup__form-group">
+						<div class="popup__form-input">
+							<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
+								placeholder="Ваш номер телефона" class="input popup__input-fr">
+						</div>
+						<div class="popup__form-btn"><a href="#" class="bnt-blue button">Отправить</a></div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
- -->

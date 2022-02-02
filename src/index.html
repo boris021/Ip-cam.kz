@@ -8,7 +8,7 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="service">
+			<section data-watch="navigator" class="service">
 				<div class="service__container">
 					<h2 class="service__title title">Наши услуги</h2>
 					<div class="service__subtitle subtitle">Вы можете прямо сейчас получить расчет системы видеонаблюдения
@@ -20,7 +20,7 @@
 								структурированной кабельной
 								системы для удобного
 								мониторинга оборудования.</div>
-							<a href="#" class="service__body-btn button">Оставить заявку</a>
+							<a href="#" data-popup="#callback" class="service__body-btn button">Оставить заявку</a>
 						</div>
 						<div class="service__body-item">
 							<div class="service__body-title">Современные технологии
@@ -28,19 +28,19 @@
 							<div class="service__body-text">Системы видеонаблюдения являются обязательным элементом комплексной
 								системы безопасности торговых и производственных предприятий, заведений общественного питания и
 								сферы развлечений.</div>
-							<a href="#" class="service__body-btn button">Оставить заявку</a>
+							<a href="#" data-popup="#callback" class="service__body-btn button">Оставить заявку</a>
 						</div>
 						<div class="service__body-item">
 							<div class="service__body-title">Установка и конфигурирование точек доступа</div>
 							<div class="service__body-text">Настройка оборудования, программирование точек доступа согласно
 								техническому заданию с последующим обучением персонала.</div>
-							<a href="#" class="service__body-btn button">Оставить заявку</a>
+							<a href="#" data-popup="#callback" class="service__body-btn button">Оставить заявку</a>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="secure">
+			<section data-watch="navigator" class="secure">
 				<div class="secure__container">
 					<h2 class="secure__title title">3 составляющие <br> <strong>Вашей безопасности</strong></h2>
 					<div class="secure__body">
@@ -137,7 +137,7 @@
 				<img src="@img/secure-bg.jpg" alt="secure" class="secure-bg _ibg">
 			</section>
 
-			<section class="work">
+			<section data-watch="navigator" class="work">
 				<div class="work__container">
 					<h2 class="secure__title title"><strong>Устанавливаем видеонаблюдение </strong><br> на любые объекты, в
 						том числе: </h2>
@@ -170,7 +170,7 @@
 				</div>
 			</section>
 
-			<section class="estimate">
+			<section data-watch="navigator" class="estimate">
 				<div class="estimate__container">
 					<div class="estimate__body">
 						<div class="estimate__body-content">
@@ -242,7 +242,7 @@
 				<img src="@img/estimate-bg.jpg" alt="estimate" class="estimate-bg _ibg">
 			</section>
 
-			<section class="camera">
+			<section data-watch="navigator" class="camera">
 				<div class="camera__container">
 					<h2 class="camera__title title">За <strong>2021 год</strong> уже стали безопаснее более чем 20 объектов
 						Вот некоторые из них</h2>
@@ -265,7 +265,7 @@
 				</div>
 			</section>
 
-			<section class="about">
+			<section data-watch="navigator" class="about">
 				<div class="about__container">
 					<h2 class="camera__title title">О нашей <strong>компании</strong></h2>
 					<div class="about__body">
@@ -296,7 +296,7 @@
 				<img src="@img/about-bg.jpg" alt="about" class="about-bg">
 			</section>
 
-			<setion class="contacts">
+			<section data-watch="navigator" class="contacts">
 				<div class="contacts__container">
 					<div class="contacts__body">
 						<div class="contacts__body-left">
@@ -319,7 +319,7 @@
 									<p class="contacts__body-text">Казахстан, г.Алматы, <br> ул. Куныскерея 286</p>
 								</div>
 							</div>
-							<a href="#" class="contacts__body-btn bnt-blue button">Оставить заявку</a>
+							<a href="#" data-popup="#callback" class="contacts__body-btn bnt-blue button">Оставить заявку</a>
 						</div>
 						<div class="contacts__body-right">
 							<div class="contacts__body-title">Как к нам проехать</div>
@@ -336,7 +336,7 @@
 						</div>
 					</div>
 				</div>
-			</setion>
+			</section>
 
 		</main>
 		@@include('html/_footer.htm',{})

@@ -11,9 +11,11 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
+
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -25,16 +27,19 @@ body::after {
 	visibility: hidden;
 	pointer-events: none;
 }
+
 .popup_show {
 	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
+
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -46,6 +51,7 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
+
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
@@ -55,7 +61,71 @@ body::after {
 	width: 100%;
 	max-width: 900px;
 	border-radius: 20px;
+
 	.lock & {
 		visibility: visible;
+	}
+}
+
+.popup {
+
+	&__close {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__text-title {
+		@include adaptiveValue("font-size", 28, 20);
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+
+	&__text-subtitle {
+		@include adaptiveValue("font-size", 20, 16);
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: center;
+
+		&-group {
+			display: flex;
+			// align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+		}
+
+		&-input {
+			flex: 1 1 auto;
+			margin: 0 20px;
+
+			@media (max-width:$mobile) {
+				margin-bottom: 20px;
+				// margin-right: 0;
+			}
+		}
+
+		&-btn {
+			display: inline-flex;
+			flex: 1 1 auto;
+
+			@media (max-width:$tablet) {
+				text-align: center;
+				display: block;
+			}
+		}
 	}
 }
