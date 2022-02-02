@@ -129,3 +129,18 @@ body::after {
 		}
 	}
 }
+
+.popup__text {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 600;
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.popup__subtext {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 30px;
+}

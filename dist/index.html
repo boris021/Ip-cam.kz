@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220202113834">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220202143338">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
 					<div class="top-body__social social-items">
 						<div class="social-items__icons">
 							<img src="img/whatsapp.svg" alt="whatsapp" class="social-items__icon">
-							<a href="#" class="social-items__text">Whatsapp</a>
+							<a href="https://api.whatsapp.com/send?phone=+77089713373" target="_blank" class="social-items__text">Whatsapp</a>
 						</div>
 						<div class="social-items__icons">
 							<img src="img/telegram.svg" alt="telegram" class="social-items__icon">
@@ -88,7 +88,7 @@
 								<div class="main__right-text">Уже через несколько минут на
 									удобный Вам мессенджер или на e-mail</div>
 								<div class="main__right-icons">
-									<a href="#" class="main__right-icon">
+									<a href="https://api.whatsapp.com/send?phone=+77089713373" class="main__right-icon">
 										<img src="img/whatsapp1.svg" alt="whatsapp">
 										<span>Whatsapp</span>
 									</a>
@@ -96,7 +96,7 @@
 										<img src="img/telegeram1.svg" alt="telegram">
 										<span>Telegram</span>
 									</a>
-									<a href="#" class="main__right-icon">
+									<a href="mailto:ipcam2019@bk.ru" class="main__right-icon">
 										<img src="img/email.svg" alt="Email">
 										<span>Email</span>
 									</a>
@@ -293,45 +293,45 @@
 								<div class="form-estimate__text">или заполните форму,
 									чтобы получить предварительную смету</div>
 								<div class="estimate-form">
-									<form action="#" method="post">
+									<form data-ajax data-goto-error data-popup-message="#form-message" action="sendmail.php" method="POST">
 										<div class="form-group">
-											<label for="house" class="label">Куда нужно видеонаблюдение?</label>
-											<select name="form[]" class="form">
-												<option value="1" selected>Дом</option>
-												<option value="2">Дача</option>
-												<option value="3">Квартира</option>
-												<option value="4">Магазин</option>
-												<option value="4">Кафе</option>
+											<input type="hidden" name="hidden" value="Смета"></p>
+											<label for="lodging" class="label">Куда нужно видеонаблюдение?</label>
+											<select name="house" class="form">
+												<option value="Дом" selected>Дом</option>
+												<option value="Дача">Дача</option>
+												<option value="Квартира">Квартира</option>
+												<option value="Магазин">Магазин</option>
+												<option value="Кафе">Кафе</option>
 											</select>
 										</div>
 										<div class="form-group">
 											<label for="house" class="label">Сколько вам потребуется камер видеонаблюдения?</label>
-											<select name="form[]" class="form">
-												<option value="1" selected>1 камера</option>
-												<option value="2">2 камеры</option>
-												<option value="3">3 камеры</option>
-												<option value="4">4 камеры</option>
-												<option value="4">5 камер</option>
+											<select name="much" class="form">
+												<option value="1 камера" selected>1 камера</option>
+												<option value="2 камеры">2 камеры</option>
+												<option value="3 камеры">3 камеры</option>
+												<option value="4 камеры">4 камеры</option>
+												<option value="5 камер">5 камер</option>
 											</select>
 										</div>
 										<div class="form-group">
-											<label for="house" class="label">Сколько дней требуется хранить запись с камер?
-											</label>
-											<select name="form[]" class="form">
-												<option value="1" selected>7 дней</option>
-												<option value="2">14 дней</option>
-												<option value="3">30 дней</option>
+											<label for="house" class="label">Сколько дней требуется хранить запись с камер?</label>
+											<select name="day" class="form">
+												<option value="7 дней" selected>7 дней</option>
+												<option value="14 дней">14 дней</option>
+												<option value="30 дней">30 дней</option>
 											</select>
 										</div>
 										<div class="form-group">
 											<label for="house" class="label">Введите ваше имя</label>
-											<input autocomplete="on" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше имя" class="input">
+											<input autocomplete="on" type="text" name="name" data-error="Ошибка" placeholder="Ваше имя" class="input">
 										</div>
 										<div class="form-group">
 											<label for="house" class="label">Введите ваш номер телефона</label>
-											<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Ваш телефон" class="input">
+											<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш телефон" class="input">
 										</div>
-										<a href="#" class="estimate-btn bnt-blue button">Получить смету</a>
+										<button type="submit" class="estimate-btn bnt-blue button">Получить смету</button>
 									</form>
 								</div>
 							</div>
@@ -407,25 +407,58 @@
 								</div>
 								<div class="contacts__body-item">
 									<span>Whatsapp:</span>
-									<a href="tel:+77089713373" class="contacts__body-link">+7 708 971 33 73</a>
+									<a href="https://api.whatsapp.com/send?phone=+77089713373" target="_blank" class="contacts__body-link">+7 708 971 33 73</a>
 								</div>
 								<div class="contacts__body-item">
 									<span>E-mail:</span>
 									<a href="mailto:ipcam2019@bk.ru" class="contacts__body-link">ipcam2019@bk.ru</a>
 								</div>
-								<div class="contacts__body-item">
-									<span>Адрес:</span>
-									<p class="contacts__body-text">Казахстан, г.Алматы, <br> ул. Куныскерея 286</p>
-								</div>
 							</div>
 							<a href="#" data-popup="#callback" class="contacts__body-btn bnt-blue button">Оставить заявку</a>
 						</div>
 						<div class="contacts__body-right">
-							<div class="contacts__body-title">Как к нам проехать</div>
-							<div class="contacts__body-maps">
-								<div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/162/almaty/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Алматы</a><a href="https://yandex.kz/maps/geo/53168302/?ll=76.943464%2C43.236019&utm_medium=mapframe&utm_source=maps&z=17.32" style="color:#eee;font-size:12px;position:absolute;top:14px;">Алматы —
-										Яндекс.Карты</a><iframe src="https://yandex.kz/map-widget/v1/-/CCU5a4h~OD" width="100%" height="380" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-								</div>
+							<div class="contacts__body-title-right">Заполните форму, чтобы получить предварительную смету</div>
+							<div class="estimate-form">
+								<form data-ajax data-goto-error data-popup-message="#form-message" action="sendmail.php" method="POST">
+									<div class="form-group__footer">
+										<input type="hidden" name="hidden" value="Смета"></p>
+										<label for="lodging" class="label">Куда нужно видеонаблюдение?</label>
+										<select name="house" class="form">
+											<option value="Дом" selected>Дом</option>
+											<option value="Дача">Дача</option>
+											<option value="Квартира">Квартира</option>
+											<option value="Магазин">Магазин</option>
+											<option value="Кафе">Кафе</option>
+										</select>
+									</div>
+									<div class="form-group__footer">
+										<label for="house" class="label">Сколько вам потребуется камер видеонаблюдения?</label>
+										<select name="much" class="form">
+											<option value="1 камера" selected>1 камера</option>
+											<option value="2 камеры">2 камеры</option>
+											<option value="3 камеры">3 камеры</option>
+											<option value="4 камеры">4 камеры</option>
+											<option value="5 камер">5 камер</option>
+										</select>
+									</div>
+									<div class="form-group__footer">
+										<label for="house" class="label">Сколько дней требуется хранить запись с камер?</label>
+										<select name="day" class="form">
+											<option value="7 дней" selected>7 дней</option>
+											<option value="14 дней">14 дней</option>
+											<option value="30 дней">30 дней</option>
+										</select>
+									</div>
+									<div class="form-group__footer">
+										<label for="house" class="label">Введите ваше имя</label>
+										<input autocomplete="on" type="text" name="name" data-error="Ошибка" placeholder="Ваше имя" class="input">
+									</div>
+									<div class="form-group__footer">
+										<label for="house" class="label">Введите ваш номер телефона</label>
+										<input autocomplete="off" type="tel" name="tel" data-error="Ошибка" placeholder="Ваш телефон" class="input">
+									</div>
+									<button type="submit" class="estimate-btn bnt-blue button">Получить смету</button>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -438,30 +471,51 @@
 				<div class="footer-text">Все права защищены © 2022 Разработка и поддержка сайта - Студия <a href="https://webprof.kz" target="_blank">«Webprof.kz»</a> </div>
 			</div>
 		</footer>
+
+		<div type="button" class="callback-bt">
+			<a href="https://api.whatsapp.com/send?phone=+77089713373" target="_blank" rel="nofollow">
+				<div class="text-call">
+					<img src="img/whatsapp-white.svg" alt="whatsapp" class="call-whatsapp">
+				</div>
+			</a>
+		</div>
 	</div>
 	<div id="callback" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close">x</button>
 				<div class="popup__img">
-					<picture><source srcset="img/cam.webp" type="image/webp"><img src="img/cam.png" alt="cam"></picture>
+					<picture>
+						<img src="img/cam.png" alt="cam">
 				</div>
 				<div class="popup__text">
 					<div class="popup__text-title">Введите Ваш номер телефона</div>
 					<div class="popup__text-subtitle">и мы Вам перезвоним в течении 15 минут</div>
 					<div class="popup__form">
-						<form action="#" method="post" class="popup__form-group">
+						<form data-dev data-goto-error data-popup-message="#form-message" action="sendmail.php" method="POST" class="popup__form-group">
 							<div class="popup__form-input">
-								<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Ваш номер телефона" class="input popup__input-fr">
+								<input autocomplete="on" name="tel" type="tel" name="form[]" data-error="Вы не вели номер телефона" placeholder="Ваш номер телефона" class="input _phone popup__input-fr" data-required="tel">
 							</div>
-							<div class="popup__form-btn"><a href="#" class="bnt-blue button">Отправить</a></div>
+							<div class="popup__form-btn">
+								<button type="submit" href="#" class="bnt-blue button">Отправить</button>
+							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220202113834"></script>
+
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">x</button>
+				<div class="popup__text"> Ваше сообщение отправлено! </div>
+				<div class="popup__subtext"> Наши менеджеры перезвонят Вам в течении 15 минут </div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220202143338"></script>
 </body>
 
 </html>

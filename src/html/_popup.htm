@@ -3,21 +3,35 @@
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close">x</button>
 			<div class="popup__img">
-				<img src="@img/cam.png" alt="cam">
+				<picture>
+					<img src="@img/cam.png" alt="cam">
 			</div>
 			<div class="popup__text">
 				<div class="popup__text-title">Введите Ваш номер телефона</div>
 				<div class="popup__text-subtitle">и мы Вам перезвоним в течении 15 минут</div>
 				<div class="popup__form">
-					<form action="#" method="post" class="popup__form-group">
+					<form data-dev data-goto-error data-popup-message="#form-message" action="sendmail.php" method="POST"
+						class="popup__form-group">
 						<div class="popup__form-input">
-							<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка"
-								placeholder="Ваш номер телефона" class="input popup__input-fr">
+							<input autocomplete="on" name="tel" type="tel" name="form[]" data-error="Вы не вели номер телефона"
+								placeholder="Ваш номер телефона" class="input _phone popup__input-fr" data-required="tel">
 						</div>
-						<div class="popup__form-btn"><a href="#" class="bnt-blue button">Отправить</a></div>
+						<div class="popup__form-btn">
+							<button type="submit" href="#" class="bnt-blue button">Отправить</button>
+						</div>
 					</form>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div id="form-message" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">x</button>
+			<div class="popup__text"> Ваше сообщение отправлено! </div>
+			<div class="popup__subtext"> Наши менеджеры перезвонят Вам в течении 15 минут </div>
 		</div>
 	</div>
 </div>

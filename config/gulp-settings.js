@@ -36,8 +36,8 @@ export const path = {
 
 // Настройка FTP соединения
 export const configFTP = {
-	host: "", // Адрес FTP сервера
-	user: "", // Имя пользователя
-	password: "", // Пароль
+	host: "legosite.kz", // Адрес FTP сервера
+	user: "front", // Имя пользователя
+	password: "Webprof123!", // Пароль
 	parallel: 5 // Кол-во одновременных потоков
 }

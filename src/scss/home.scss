@@ -555,7 +555,7 @@
 
 	&__body-left {
 		flex: 0 0 25%;
-		margin-right: 140px;
+		margin-right: 20px;
 
 		@media (max-width:$tablet) {
 			flex: 1 1 100%;
@@ -565,7 +565,7 @@
 
 	&__body-title {
 		font-weight: 600;
-		@include adaptiveValue("font-size", 30, 26);
+		@include adaptiveValue("font-size", 26, 20);
 		line-height: math.div(37, 30);
 		margin-bottom: 16px;
 	}
@@ -582,7 +582,7 @@
 		& span {
 			font-weight: bold;
 			display: block;
-			font-size: 16px;
+			font-size: 18px;
 			line-height: math.div(20, 16);
 			margin-bottom: 6px;
 		}
@@ -590,7 +590,7 @@
 
 	&__body-link {
 		font-weight: 500;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: math.div(20, 16);
 		transition: color 0.3s ease 0s;
 
@@ -615,12 +615,22 @@
 	}
 
 	&__body-right {
-		flex: 1 1 auto;
+		flex: 1 1 60%;
 
 		@media (max-width:$tablet) {
 			flex: 1 1 100%;
 		}
 	}
+}
 
-	&__body-maps {}
+.form-group__footer {
+	margin-bottom: 20px;
+	flex: 0 0 50%;
+}
+
+.contacts__body-title-right {
+	font-weight: 600;
+	@include adaptiveValue("font-size", 26, 20);
+	line-height: math.div(37, 30);
+	margin-bottom: 16px;
 }
