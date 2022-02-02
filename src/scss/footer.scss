@@ -1,3 +1,27 @@
 //====================================================================================================
+.footer {
+	background: #182D4C;
+
+	&__container {
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+	}
+}
+
+.footer-text {
+	font-weight: 500;
+	@include adaptiveValue("font-size", 14, 13);
+	text-align: center;
+	line-height: math.div(17, 14);
+	color: #FFFFFF;
+
+	& a {
+		text-decoration: underline;
+		color: #ececec
+	}
+}
 
 //====================================================================================================
